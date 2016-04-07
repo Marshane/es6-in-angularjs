@@ -1,0 +1,27 @@
+<div class="account-flex-container">
+
+    <div class="account-container">
+        <h1 class="animated-middle zoomIn">51信用卡 - 微服务后台</h1>
+        <h2>用户登录</h2>
+        <form name="loginForm">
+            <div class="account-input">
+                <input ng-model="vm.state.mode.username" placeholder="用户名" name="username" required/>
+            </div>
+            <div class="account-input">
+                <input type="password" ng-model="vm.state.mode.password" placeholder="密码" name="password" required/>
+            </div>
+            <div ng-if="vm.state.isSubmitErrorText" class="alert alert-danger alert-dismissible" style="margin-bottom: 20px;">
+                <button type="button" ng-click="vm.state.isSubmitErrorText = ''" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">×</span>
+                </button>
+                {{vm.state.isSubmitErrorText}}
+            </div>
+
+            <button ng-if="!vm.state.submitting" class="ui green button" ng-click="vm.submit()" ng-disabled="loginForm.$invalid" ng-style="{opacity: loginForm.$invalid ? 0.5 : 1}">登录</button>
+            <button ng-if="vm.state.submitting" class="ui green button" ng-style="{opacity: 0.5}">登录中..</button>
+        </form>
+    </div>
+</div>
+<style>
+    body {background-color: #F7F6F2}
+</style>

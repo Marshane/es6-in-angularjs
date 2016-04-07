@@ -1,0 +1,156 @@
+.main {
+    margin: 0 20px;
+    padding: 30px 0;
+}
+.content {
+    clear: both
+}
+button.close {
+    -webkit-appearance: none;
+    padding: 0;
+    cursor: pointer;
+    background: 0 0;
+    border: 0;
+}
+.action-buttons {
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+.close {
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    filter: alpha(opacity=20);
+    opacity: .2;
+    position: relative;
+    top:-2px;
+}
+.alert-danger {
+    color: #a94442;
+    background-color: #f2dede;
+    border-color: #ebccd1;
+}
+.alert {
+    padding: 15px;
+    /*margin-bottom: 20px;*/
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+
+.pull-right {
+    float: right !important;
+}
+.pull-left {
+    float:left !important;
+}
+
+.head {
+    /*align-items: center;*/
+    background: rgba(60,60,60,.9);
+    /*background: rgba(53, 73, 94, 1);*/
+    color: white;
+    /*content-sizing: padding-box;*/
+    /*display: flex;*/
+    min-height: 56px;
+    text-align: center;
+    padding-left:20px;
+}
+.head .nav {
+    float: left;
+}
+.head a {
+    color:#fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    /*float: left;*/
+    line-height: 56px;
+    padding: 0 40px;
+    cursor: pointer;
+}
+.head a:hover,
+.head a.active {
+    background:rgba(255,255,255,.2);
+}
+.loginState {
+    float: right;
+    display: none;
+
+}
+
+.account-flex-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.account-container {
+    position: relative;
+    z-index: 1001;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px 40px 40px;
+    border-radius: 10px;
+    background-color: #fff;
+    -webkit-box-shadow: 0px 4px 23px 0px rgba(195,199,199,1);
+    -moz-box-shadow: 0px 4px 23px 0px rgba(195,199,199,1);
+    box-shadow: 0px 4px 23px 0px rgba(195,199,199,1);
+}
+
+.account-container h1 {
+    position: absolute;;
+    top: -100px;
+    width: 100%;
+    left: 0;
+    font-size: 35px;
+    text-align: center;
+}
+
+.account-container h2 {
+    margin: 0 0 25px;
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+    color: #323a45;
+}
+
+.account-container .account-input {
+    position: relative;
+    height: 68px;
+}
+
+.account-container .account-input input {
+    height: 48px;
+    width: 370px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    border: 1px solid rgba(50,58,69,.2);
+    border-radius: 5px;
+}
+
+.account-container button.ui {
+    width: 400px;
+    height: 48px !important;
+    border: none;
+    background-color: #323a45;
+    color: #fff;
+    font-size: 24px !important;
+    border-radius: 24px;
+    cursor: pointer;
+    transition: opacity .2s ease;
+}
+button[disabled] {
+    cursor: default !important;
+}

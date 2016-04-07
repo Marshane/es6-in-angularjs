@@ -1,0 +1,16 @@
+<div class="ui dimmer page active">
+    <div class="ui tiny40 modal  transition  animating scale in"
+         style="margin-top: -187px; width:400px; margin-left:-200px; animation-duration:200ms">
+        <div class="header">
+            确认
+        </div>
+        <div class="content">
+            {{txt}}
+            <!-- state.confirm ? 'scale in': ' hidden scale out'" -->
+        </div>
+        <div class="action-buttons">
+            <a class="ui button" ng-click="cancel()">取消</a>
+            <a class="ui green button" ng-click="ok()">确定</a>
+        </div>
+    </div>
+</div>

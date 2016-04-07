@@ -1,0 +1,14 @@
+<table class="text-align-left-th">
+    <thead>
+        <th>groupId</th>
+        <th>artifactId</th>
+        <th>version</th>
+    </thead>
+    <tbody>
+        <tr ng-repeat="mod in row.branch[col.field]">
+            <td ng-bind="mod.groupId"></td>
+            <td ng-bind="mod.artifactId"></td>
+            <td ng-bind="mod.version"></td>
+        </tr>
+    </tbody>
+</table>

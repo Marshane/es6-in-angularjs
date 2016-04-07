@@ -1,0 +1,475 @@
+.ui.button {
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    min-height: 1em;
+    outline: 0;
+    border: none;
+    background-color: #FAFAFA;
+    color: gray;
+    margin: 0;
+    padding: .8em 1.5em;
+    text-transform: uppercase;
+    line-height: 1;
+    font-weight: 700;
+    font-style: normal;
+    text-align: center;
+    text-decoration: none;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .05)));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .05));
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .05));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .05));
+    border-radius: .25em;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .08) inset;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .08) inset;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-transition: opacity .25s ease, background-color .25s ease, color .25s ease, background .25s ease, -webkit-box-shadow .25s ease;
+    -moz-transition: opacity .25s ease, background-color .25s ease, color .25s ease, background .25s ease, box-shadow .25s ease;
+    transition: opacity .25s ease, background-color .25s ease, color .25s ease, background .25s ease, box-shadow .25s ease
+}
+
+.ui.active.button,
+.ui.buttons .active.button {
+    background-color: #EAEAEA;
+    background-image: none;
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .05) inset!important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05) inset!important;
+    color: rgba(0, 0, 0, .7)
+}
+
+.ui.button:hover {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, .08)));
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .08));
+    background-image: -moz-linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .08));
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .08));
+    color: rgba(0, 0, 0, .7)
+}
+
+.ui.button.active:hover {
+    background-image: none
+}
+
+.ui.button.hover .icon,
+.ui.button:hover .icon {
+    opacity: .85
+}
+
+.ui.active.button:active,
+.ui.button:active {
+    background-color: #F1F1F1;
+    color: rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 0 0 0 1px rgba(0, 0, 0, .05) inset!important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .05) inset!important
+}
+
+
+.ui.button,
+.ui.button {
+    font-size: 14px;
+    padding: 0 1.5em;
+    text-transform: none;
+    line-height: 30px;
+    height: 30px;
+    color: #000!important;
+    background-image: none;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+    border-radius: 2em;
+    background-color: #FFF!important
+}
+
+.ui.button:hover,
+.ui.button:hover {
+    background-color: #FDFDFD!important
+}
+
+.ui.button:active,
+.ui.button:active {
+    background-color: #E5E5E5!important;
+    color: #FFF
+}
+
+.ui.button.disabled,
+.ui.button.disabled {
+    border: 1px solid #DDD
+}
+
+.ui.button.borderless,
+.ui.button.borderless {
+    background: none!important;
+    border: 0!important;
+    -webkit-box-shadow: none!important;
+    -moz-box-shadow: none!important;
+    box-shadow: none!important;
+    cursor: pointer
+}
+
+.ui.button.blue,
+.ui.button.blue {
+    color: #FFF!important;
+    background-color: #5191bd!important
+}
+
+.ui.button.blue:hover,
+.ui.button.blue:hover {
+    background-color: #4b86ad!important
+}
+
+.ui.button.blue:active,
+.ui.button.blue:active {
+    background-color: #447a9e!important;
+    color: #FFF
+}
+
+.ui.button.blue.disabled,
+.ui.button.blue.disabled {
+    border: none
+}
+
+.ui.button.gray,
+.ui.button.gray {
+    color: #FFF!important;
+    background-color: #666!important
+}
+
+.ui.button.gray:hover,
+.ui.button.gray:hover {
+    background-color: #575757!important
+}
+
+.ui.button.gray:active,
+.ui.button.gray:active {
+    background-color: #474747!important;
+    color: #FFF
+}
+
+.ui.button.gray.disabled,
+.ui.button.gray.disabled {
+    border: none
+}
+
+.ui.button.light.gray,
+.ui.button.light.gray {
+    color: #FFF!important;
+    background-color: #999!important
+}
+
+.ui.button.light.gray:hover,
+.ui.button.light.gray:hover {
+    background-color: #8a8a8a!important
+}
+
+.ui.button.light.gray:active,
+.ui.button.light.gray:active {
+    background-color: #7a7a7a!important;
+    color: #FFF
+}
+
+.ui.button.light.gray.disabled,
+.ui.button.light.gray.disabled {
+    border: none
+}
+
+.ui.button.dark.gray,
+.ui.button.dark.gray {
+    color: #FFF!important;
+    background-color: #333!important
+}
+
+.ui.button.dark.gray:hover,
+.ui.button.dark.gray:hover {
+    background-color: #242424!important
+}
+
+.ui.button.dark.gray:active,
+.ui.button.dark.gray:active {
+    background-color: #141414!important;
+    color: #FFF
+}
+
+.ui.button.dark.gray.disabled,
+.ui.button.dark.gray.disabled {
+    border: none
+}
+
+.ui.button.red,
+.ui.button.red {
+    color: #FFF!important;
+    background-color: #df5a5a!important
+}
+
+.ui.button.red:hover,
+.ui.button.red:hover {
+    background-color: #cf5353!important
+}
+
+.ui.button.red:active,
+.ui.button.red:active {
+    background-color: #bf4d4d!important;
+    color: #FFF
+}
+
+.ui.button.red.disabled,
+.ui.button.red.disabled {
+    border: none
+}
+
+.ui.button.green,
+.ui.button.green {
+    color: #FFF!important;
+    background-color: #32be77!important
+}
+
+.ui.button.green:hover,
+.ui.button.green:hover {
+    background-color: #2eb06f!important
+}
+
+.ui.button.green:active,
+.ui.button.green:active {
+    background-color: #2aa165!important;
+    color: #FFF
+}
+
+.ui.button.green.disabled,
+.ui.button.green.disabled {
+    border: none
+}
+
+.ui.button.yellow,
+.ui.button.yellow {
+    color: #FFF!important;
+    background-color: #eb935d!important
+}
+
+.ui.button.yellow:hover,
+.ui.button.yellow:hover {
+    background-color: #cc8152!important
+}
+
+.ui.button.yellow:active,
+.ui.button.yellow:active {
+    background-color: #bd774b!important;
+    color: #FFF
+}
+
+.ui.button.yellow.disabled,
+.ui.button.yellow.disabled {
+    border: none
+}
+
+.ui.button.mini,
+.ui.button.mini {
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px
+}
+
+.ui.button.small,
+.ui.button.small {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px
+}
+
+.ui.button.medium,
+.ui.button.medium {
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px
+}
+
+.ui.button.large,
+.ui.button.large {
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px
+}
+
+.ui.button.huge,
+.ui.button.huge {
+    font-size: 30px;
+    height: 63px;
+    line-height: 63px
+}
+
+.ui.button.green,
+.ui.button.green {
+    color: #FFF!important;
+    background-color: #32be77!important
+}
+
+.ui.button.green:hover,
+.ui.button.green:hover {
+    background-color: #2eb06f!important
+}
+
+.ui.button.green:active,
+.ui.button.green:active {
+    background-color: #2aa165!important;
+    color: #FFF
+}
+
+.ui.button.green.disabled,
+.ui.button.green.disabled {
+    border: none
+}
+
+.ui.button.yellow,
+.ui.button.yellow {
+    color: #FFF!important;
+    background-color: #eb935d!important
+}
+
+.ui.button.yellow:hover,
+.ui.button.yellow:hover {
+    background-color: #cc8152!important
+}
+
+.ui.button.yellow:active,
+.ui.button.yellow:active {
+    background-color: #bd774b!important;
+    color: #FFF
+}
+
+.ui.button.yellow.disabled,
+.ui.button.yellow.disabled {
+    border: none
+}
+
+.ui.button.mini,
+.ui.button.mini {
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px
+}
+
+.ui.button.small,
+.ui.button.small {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px
+}
+
+.ui.button.medium,
+.ui.button.medium {
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px
+}
+
+.ui.button.large,
+.ui.button.large {
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px
+}
+
+.ui.button.huge,
+.ui.button.huge {
+    font-size: 30px;
+    height: 63px;
+    line-height: 63px
+}
+
+.ui.action.input>.button,
+.ui.action.input>.buttons,
+.ui.action.input>.button,
+.ui.action.input>.buttons {
+    -webkit-border-radius: .25em;
+    -moz-border-radius: .25em;
+    -ms-border-radius: .25em;
+    -o-border-radius: .25em;
+    border-radius: 0 .25em .25em 0
+}
+
+.ui.input.mini>.button {
+    font-size: 10px;
+    height: 18px;
+    line-height: 18px
+}
+
+.ui.input.small>.button {
+    font-size: 12px;
+    height: 24px;
+    line-height: 24px
+}
+
+.ui.input.medium>.button {
+    font-size: 18px;
+    height: 36px;
+    line-height: 36px
+}
+
+.ui.input.large>.button {
+    font-size: 24px;
+    height: 48px;
+    line-height: 48px
+}
+
+.ui.input.huge>.button {
+    font-size: 30px;
+    height: 63px;
+    line-height: 63px
+}
+
+.ui.input.mini>input {
+    padding: .5px 1em
+}
+
+.ui.input.small>input {
+    padding: 4px 1em
+}
+
+.ui.input>input {
+    padding: 5px 1em;
+    font-family: '微软雅黑', 'Helvetica Neue', sans-serif, SimHei
+}
+
+.ui.input.medium>input {
+    padding: 8px 1em
+}
+
+.ui.input.large>input {
+    padding: 12px 1em
+}
+
+.ui.input.huge>input {
+    padding: 17px 1em
+}
+
+.ui.input.mini.icon>.icon {
+    padding-top: 2px;
+    width: 20px
+}
+
+.ui.input.small.icon>.icon {
+    padding-top: 6px;
+    width: 25px
+}
+
+.ui.input.icon>.icon {
+    padding-top: 8px
+}
+
+.ui.input.medium.icon>.icon {
+    padding-top: 11px
+}
+
+.ui.input.large.icon>.icon {
+    padding-top: 14px
+}
+
+.ui.input.huge.icon>.icon {
+    padding-top: 22px
+}

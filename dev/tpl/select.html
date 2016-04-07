@@ -1,0 +1,19 @@
+<div class="ui-select">
+<!-- {{p.index}} -->
+    <div class="ui-select-input">
+        <input type="text" autocomplete="off"  placeholder="{{placeholder}}" ng-model="modelText" class="ui-select-search"/>
+    </div>
+    <div class="ui-select-choices" ng-show="open">
+        <div class="ui-select-search">
+            <input type="text" placeholder="搜索" ng-model="search[key]"/>
+        </div>
+        <div class="ui-select-choices-group" perfect-scrollbar refresh-on-change="data | filter:search" wheel-propagation="false" wheel-speed="10">
+            <div class="ui-select-choices-row"
+                ng-click="onSelected(it, $index)"
+                ng-class="{active: $index === p.index}"
+                ng-repeat="it in data | filter:search track by $index">
+                <span>{{key ? it[key] : it}}</span>
+            </div>
+        </div>
+    </div>
+</div>

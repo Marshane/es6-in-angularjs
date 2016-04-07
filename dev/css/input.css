@@ -1,0 +1,24 @@
+.ui.input.mini>input {
+    padding: .5px 1em
+}
+
+.ui.input.small>input {
+    padding: 4px 1em
+}
+
+.ui.input>input {
+    padding: 5px 1em;
+    font-family: '微软雅黑', 'Helvetica Neue', sans-serif, SimHei
+}
+
+.ui.input.medium>input {
+    padding: 8px 1em
+}
+
+.ui.input.large>input {
+    padding: 12px 1em
+}
+
+.ui.input.huge>input {
+    padding: 17px 1em
+}

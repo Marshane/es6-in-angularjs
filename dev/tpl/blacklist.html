@@ -1,0 +1,26 @@
+
+<div class="action-buttons">
+    <a class="ui green button"  ng-click="vm.onAddOrEdit(0)">新增</a>
+    <!-- <a class="ui button" style="margin-left:30px;" href="/index">返回</a> -->
+</div>
+
+
+<article class="markdown content">
+    <table class="text-align-left-th">
+        <thead>
+            <th>ID</th>
+            <th>值</th>
+            <th width="200">操作</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="mod in vm.list">
+                <td ng-bind="mod.id"></td>
+                <td ng-bind="mod.value"></td>
+                <td>
+                    <span ng-click="vm.onAddOrEdit(1, mod)" style="cursor:pointer; margin-right:20px;">编辑</span>
+                    <span ng-if="mod.id !== undefined" ng-click="vm.onDel(mod.id)" style="cursor:pointer;">删除</span>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</article>

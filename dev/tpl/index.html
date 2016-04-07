@@ -1,0 +1,34 @@
+<div class="action-buttons">
+    <!-- <a class="ui green button" href="/config">配置</a> -->
+    <a class="ui green button" ng-click="vm.refresh()">刷新</a>
+</div>
+<article class="markdown content">
+    <table class="text-align-left-th">
+        <thead>
+            <th>模块</th>
+            <th>app</th>
+            <th>tag</th>
+            <th>url</th>
+            <th>状态</th>
+            <!-- <th>最后更新时间</th> -->
+            <th>系统运行时间</th>
+            <th>负责人</th>
+            <th>备注</th>
+        </thead>
+        <tbody>
+            <tr ng-repeat="mod in vm.list">
+                <td ng-if="!mod._is0Rs" ng-bind="mod.moduleName" rowspan="{{mod.__tl}}"></td>
+                <td ng-if="!mod._is1Rs" ng-bind="mod.serviceName" rowspan="{{mod.__l}}"></td>
+                <td ng-bind="mod.tag"></td>
+                <td>
+                    <a ng-href="{{mod.swaggerUiUrl}}">{{mod.swaggerUiUrl}}</a>
+                </td>
+                <td ng-bind="mod.status" ng-style="{color: vm.status(mod.status)}"></td>
+                <!-- <td ng-bind="mod.updateTime"></td> -->
+                <td ng-bind="mod.sysContinueTime"></td>
+                <td ng-if="!mod._is1Rs" ng-bind="mod.principalName"  rowspan="{{mod.__l}}"></td>
+                <td ng-if="!mod._is1Rs" ng-bind="mod.reMark"  rowspan="{{mod.__l}}"></td>
+            </tr>
+        </tbody>
+    </table>
+</article>

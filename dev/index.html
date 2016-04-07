@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="main">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>ServiceDocDashboard</title>
+    <base href="/">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <div ng-class="!isLogin ? 'animated-fast slideInDown' : 'animated slideOutUp'" class="head" ng-controller="headCtrl as vm">
+        <div class="nav"><a ng-repeat="it in vm.nav" ng-href="{{it.url}}" ng-class="{active: $originalPath === it.url}" ng-bind="it.txt"></a></div>
+        <div class="loginState" ng-style="{display: logined !== undefined ? 'block' : ''}">
+            <span ng-if="!logined">游客您好~  <a ng-href="/login">登录</a></span>
+            <span ng-if="logined"><em ng-if="vm.admin">管理员：</em><em ng-bind="vm.username"></em> <a ng-click="vm.onLogout()">退出</a></span>
+        </div>
+    </div>
+    <div class="main pd15" ng-view></div>
+    <div class="loading" ng-if="loading" loading></div>
+</body>
+</html>

@@ -1,0 +1,182 @@
+table.text-align-left-th th {
+    text-align: left
+}
+.markdown.content {
+    font-size: 14px;
+    line-height: 23px;
+    overflow: hidden;
+    word-wrap: break-word;
+    color: #333
+}
+.markdown.content .markdown-table {
+    width: 100%;
+    overflow: auto;
+    margin: 15px 0!important
+}
+
+.markdown.content .markdown-table table {
+    margin: 0
+}
+
+.markdown.content table {
+    width: 100%;
+    overflow: auto;
+    border-collapse: collapse;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    /*table-layout:fixed*/
+}
+
+.markdown.content table th {
+    font-weight: 700;
+    background: #eee
+}
+
+.markdown.content table td,.markdown.content table th {
+    border: 1px solid #ddd;
+    padding: 6px 13px
+}
+
+.markdown.content table td {
+    vertical-align: top;
+    line-height: 20px;
+}
+.markdown.content table td td {
+    line-height: 14px;
+}
+.markdown.content table td div , .markdown.content table td span{
+    word-wrap: break-word; word-break: normal;
+}
+
+.markdown.content table tr {
+    border-top: 1px solid #ccc;
+    background-color: #fff
+}
+
+.markdown.content table tr:nth-child(2n) {
+    background-color: #f6f6f6
+}
+
+.markdown.content table td.wrapTd {
+    padding: 0
+}
+
+.markdown.content table td.wrapTd > div {
+    position: relative;
+    margin: -1px;
+}
+
+.markdown.content table td.wrapTd table {
+    border: none;
+    table-layout: fixed;
+}
+
+
+
+
+/*
+ * treeGrid.css
+ *
+ * Styles for the tree-grid
+ * for both Bootstrap 2 and Bootstrap 3
+ *
+ */
+.tree-grid-animate-enter,
+.tree-grid-row.ng-enter {
+	transition : 200ms linear all;
+	position   : relative;
+	display    : block;
+	opacity    : 0;
+	max-height : 0;
+}
+
+.tree-grid-animate-enter.tree-grid-animate-enter-active,
+.tree-grid-row.ng-enter-active {
+	opacity    : 1;
+	max-height : 30px;
+}
+
+.tree-grid-animate-leave,
+.tree-grid-row.ng-leave {
+	transition : 200ms linear all;
+	position   : relative;
+	display    : block;
+	height     : 30px;
+	max-height : 30px;
+	opacity    : 1;
+}
+
+.tree-grid-animate-leave.tree-grid-animate-leave-active,
+.tree-grid-row.ng-leave-active {
+	height     : 0;
+	max-height : 0;
+	opacity    : 0;
+}
+
+/*
+ * Angular 1.2.0 Animation placeholders.
+ */
+.tree-grid-animate.ng-enter {
+}
+
+/*
+ * Normal CSS styles.
+ */
+ .tree-grid .indented {
+     float: left;
+ }
+
+.tree-grid i.indented {
+	padding : 2px;
+}
+
+.tree-grid .level-1 .indented {
+	position : relative;
+	left     : 0;
+}
+
+.tree-grid .level-2 .indented {
+	position : relative;
+	left     : 20px;
+}
+
+.tree-grid .level-3 .indented {
+	position : relative;
+	left     : 40px;
+}
+
+.tree-grid .level-4 .indented {
+	position : relative;
+	left     : 60px;
+}
+
+.tree-grid .level-5 .indented {
+	position : relative;
+	left     : 80px;
+}
+
+.tree-grid .level-6 .indented {
+	position : relative;
+	left     : 100px;
+}
+
+.tree-grid .level-7 .indented {
+	position : relative;
+	left     : 120px;
+}
+
+.tree-grid .level-8 .indented {
+	position : relative;
+	left     : 140px;
+}
+
+.tree-grid .level-9 .indented {
+	position : relative;
+	left     : 160px;
+}
+
+.tree-grid .tree-icon,
+.tree-label {
+	cursor : pointer;
+}
