@@ -19,11 +19,11 @@ class Head {
             {
                 url: '/blacklist',
                 txt: '黑名单'
-            },
-            {
-               url: '/maven',
-               txt: 'Maven模块'
             }
+            //{
+            //    url: '/maven',
+            //    txt: 'Maven模块'
+            //}
         ];
         this.getUsername();
 

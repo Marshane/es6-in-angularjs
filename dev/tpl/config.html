@@ -54,37 +54,19 @@
         <div class="content">
             <!-- {{vm.form}} -->
             <form class="ui small form ng-pristine ng-valid" name="addOrEditForm">
-
+                {{vm.parentvm}}
                 <div class="field">
                     <label>是父级模块 </label>
-                    <!-- <div class="ui-suggest-select">
-                        <input type="text"
-                               suggest
-                               ng-model="vm.from.parentId"
-                               name="parentId"
-                               data="vm.parentvm"
-                               key="categoryName"
-                               as-value="id"
-                               match="1"
-                               ctrl="vm.ctrl">
-                        <span class="caret pull-right" ng-click="vm.ctrl.suggest._show()"></span>
-                    </div> -->
-                    <!-- <input style="opacity: 0.5" type="text" ng-model="vm.form.categoryName" ng-disabled="true" name="categoryName"> -->
-                    <div class="ui-select" ng-style="{opacity: vm.state.isEdit? 0.5 : 1}" ng-disabled="vm.state.isEdit" select data="vm.parentvm" placeholder="请选择模块"
+                    <div class="ui-select" ng-style="{opacity: vm.state.isEdit? 0.5 : 1}" ng-disabled="vm.state.isEdit" select data="vm.parentCategory" placeholder="请选择模块"
                     ng-model="vm.form.parentId" key="categoryName" as-value="id"></div>
                 </div>
                 <div ng-if="!vm.form.parentId" class="field">
                     <label>模块<i style="color:red">*</i></label>
                     <input type="text" ng-model="vm.form.categoryName" name="categoryName" required>
                 </div>
-
                 <div ng-if="vm.form.parentId" class="field">
                     <label>app<i ng-if="vm._mod.id === undefined" style="color:red">*</i></label>
                     <input style="opacity: 0.5" ng-if="vm._mod.id"  type="text" ng-model="vm.form.categoryName" ng-disabled="true" name="categoryName">
-                    <!-- <select  ng-if="vm._mod.id === undefined" name="categoryName" ng-model="vm.form.categoryName" style="font-size:1em;">
-                        <option value="">--请选择--</option>
-                        <option value="{{it}}" ng-repeat="it in vm.servicesName track by $index">{{it}}</option>
-                    </select> -->
                     <div ng-if="vm._mod.id === undefined" class="ui-select" select data="vm.servicesName" placeholder="请选择app"
                     ng-model="vm.form.categoryName" required></div>
                 </div>

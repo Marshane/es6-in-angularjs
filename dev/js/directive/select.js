@@ -18,7 +18,6 @@ angular.module('ui.select', [])
                     var group = temp.find('.ui-select-choices-group');
                     if (!attr.key) {
                         row.attr('ng-repeat','it in data | filter:search.key track by $index');
-                        // console.log(row);
                         input.attr('ng-model','search.key');
                         group.attr('refresh-on-change','data | filter:search.key');
                     }
@@ -27,6 +26,7 @@ angular.module('ui.select', [])
                 post: function(scope, elem, attr, ngModel) {
                     var modelInput = elem.find('.ui-select-input input');
                     var textInput = elem.find('.ui-select-search input');
+                        console.log(textInput);
                     var onDocumentClick = function(e) {
                         if (!scope.open) return;
                         var contains = $.contains(elem[0], e.target);
@@ -39,7 +39,6 @@ angular.module('ui.select', [])
                     };
 
                     var ngDisable = scope.ngDisable;
-
 
                     var clearKey = function() {
                         if (attr.key) {
@@ -85,7 +84,6 @@ angular.module('ui.select', [])
                         var temp = scope.data;
 
                         if(isKeyEm() && isKeyEm() !==''){
-                            // console.log('------')
                             if (attr.key) {
                                 temp = _.filter(temp, function(it) {
                                     return it[attr.key].indexOf(scope.search[attr.key]) >= 0
@@ -172,8 +170,8 @@ angular.module('ui.select', [])
                     });
 
 
-                    scope.$watchCollection('data', function(n) {
-                        // console.log('data change');
+                    scope.$watch('data', function(n) {
+                        console.log(n);
                         scope.p.index = 0;
                         if (n && n.length) {
                             if (scope.ngModel === undefined || scope.ngModel === ''){
@@ -192,7 +190,7 @@ angular.module('ui.select', [])
                                 }
                             }
                         }
-                    });
+                    },true);
 
 
                 }

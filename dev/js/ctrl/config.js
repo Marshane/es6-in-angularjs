@@ -25,7 +25,7 @@ export default class configCtrl {
         this.service.getparentconfig().then(res => {
             res = res.data;
             if (res.success) {
-                this.parentCfg = res.data;
+                this.parentCategory = res.data;
             }
         });
     }
