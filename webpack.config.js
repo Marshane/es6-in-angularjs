@@ -16,8 +16,12 @@ module.exports = function cfg () {
     var cfg = {};
 
     cfg.entry = {
-        app: path.join(devPath,'index.js')
+        app: path.join(devPath, 'index.js')
     };
+
+    if (isBuild) {
+        cfg.entry.vendor = ['jquery', 'lodash', 'angular', 'angular-sanitize', 'angular-route'];
+    }
 
     cfg.output = {
         path: __dirname + '/static',
@@ -48,15 +52,19 @@ module.exports = function cfg () {
                 exclude: /node_modules/
             },
             {
+                test: /angular/i,
+                loader: 'imports?$=jquery'
+            },
+            {
+                test: /\/jquery\.js$/,
+                loader: "expose?jQuery"
+            },
+            {
                 test: /\.css$/,
                 // loader: "style!css?sourceMap!postcss"
                 //样式外部加载
                 loader: ExtractTextPlugin.extract('style', 'css!postcss')
             },
-            // {
-            //     test: [/fontawesome-webfont\.svg/, /fontawesome-webfont\.eot/],
-            //     loader: 'file?name=fonts/[name].[ext]'
-            // },
             {
                 test: /\.(ttf|eot|svg|woff|woff2)$/,
                 loader: 'file?name=font/[name].[ext]'
@@ -79,12 +87,16 @@ module.exports = function cfg () {
             template: 'dev/index.html',
             inject: 'body'
         }),
-
         new webpack.DefinePlugin({
            __DEV__: isDev,
            __DEV_IP_ADDRESS__: '"' + ip()[0] + '"'
         }),
-        new ExtractTextPlugin('css/[name].[hash:8].css', {disable: isDev})
+        new ExtractTextPlugin('css/[name].[hash:8].css', {disable: isDev}),
+        new webpack.ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery',
+            '_': 'lodash'
+        })
     ];
 
     if (isBuild) {
@@ -92,6 +104,10 @@ module.exports = function cfg () {
             new webpack.NoErrorsPlugin(),
             new webpack.optimize.DedupePlugin(),
             new webpack.optimize.UglifyJsPlugin(),
+            new webpack.optimize.CommonsChunkPlugin({
+                name: 'vendor',
+                filename: 'js/vendor.[hash:8].js'
+            }),
             new CopyWebpackPlugin([
                 {
                     from: __dirname + 'dev'

@@ -1,6 +1,3 @@
-import $ from 'jquery';
-import _ from 'lodash';
-
 angular.module('ui.select', [])
 .directive('select', ['$document','$compile','$templateCache', ($document, $compile, $templateCache) => {
     return {
@@ -25,11 +22,11 @@ angular.module('ui.select', [])
                         input.attr('ng-model','search.key');
                         group.attr('refresh-on-change','data | filter:search.key');
                     }
-                    $(elem).append($compile(temp)(scope));
+                    elem.append($compile(temp)(scope));
                 },
                 post: function(scope, elem, attr, ngModel) {
-                    var modelInput = $(elem).find('.ui-select-input input');
-                    var textInput = $(elem).find('.ui-select-search input');
+                    var modelInput = elem.find('.ui-select-input input');
+                    var textInput = elem.find('.ui-select-search input');
                     var onDocumentClick = function(e) {
                         if (!scope.open) return;
                         var contains = $.contains(elem[0], e.target);
@@ -75,7 +72,7 @@ angular.module('ui.select', [])
                             clearKey();
                         });
                     };
-                    $($document).on('click', onDocumentClick);
+                    $document.on('click', onDocumentClick);
                     modelInput.on('keydown', function(e) {
                         e.preventDefault ? e.preventDefault() : e.returnValue = !1
                     });
@@ -83,7 +80,7 @@ angular.module('ui.select', [])
 
                     scope.p.index = 0;
                     var keyCode = [38, 40, 13];
-                    $(elem[0]).on('keyup', function(e) {
+                    elem.on('keyup', function(e) {
                         var key = e.which;
                         var temp = scope.data;
 

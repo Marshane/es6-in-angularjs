@@ -1,7 +1,3 @@
-import jQuery from 'jquery';
-// import $ from 'jquery';
-import angular from 'angular';
-
 /*! Copyright (c) 2013 Brandon Aaron (http://brandon.aaron.sh)
  * Licensed under the MIT License (LICENSE.txt).
  *
